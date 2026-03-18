@@ -38,9 +38,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
-            Fullstack Developer
+            Zia Syarafana Akbar
             <br />
-            <span className="text-gradient">&amp; Content Creator</span>
+            <span className="text-gradient">get to know about me</span>
           </motion.h1>
 
           <motion.p
@@ -49,8 +49,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            Saya membangun aplikasi web yang indah dan fungsional, 
-            serta membagikan pengetahuan melalui konten yang inspiratif.
+            i always try to discover many things such as human sciences and sum software thingy, 
+            get to know about me .
           </motion.p>
 
           <motion.div
