@@ -61,7 +61,7 @@ export default function HeroSection() {
               Zia Syarafana Akbar
               <br />
               <span className="text-gradient">
-                High School Student, Portrait Artist & Social Science Enthusiast
+                Akbar | Student, Artist & Social Science Enthusiast
               </span>
             </motion.h1>
 
@@ -114,13 +114,13 @@ export default function HeroSection() {
             >
               {[
                 { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Youtube, href: '#', label: 'YouTube' },
                 { icon: Instagram, href: '#', label: 'Instagram' },
               ].map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noeferrer"
                   className="p-3 rounded-full glass hover:shadow-glow transition-all duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
