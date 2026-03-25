@@ -31,7 +31,7 @@ export default function HeroSection() {
 
             {/* Image with border */}
             <img
-              src="/Bejojoysocool/public/IMG-20250824-WA0095 (1).jpg" // ganti dengan foto kamu
+              src="/FOTO-ZIA.jpg"
               alt="Profile"
               className="w-full h-full object-cover border border-white/20 shadow-2xl"
               style={{
