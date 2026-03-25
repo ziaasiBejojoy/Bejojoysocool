@@ -4,23 +4,23 @@ const skills = {
   frontend: [
     { name: 'Portrait Drawing', level: 90 },
     { name: 'Sketching', level: 85 },
-    { name: 'Digital Art Basics', level: 75 },
-    { name: 'Creativity', level: 92 },
-    { name: 'Visual Observation', level: 88 },
+    { name: 'Digital Art Basics', level: 67 },
+    { name: 'Creativity', level: 96 },
+    { name: 'Visual Observation', level: 89 },
   ],
   backend: [
-    { name: 'Social Science Understanding', level: 85 },
+    { name: 'Social Science Understanding', level: 90 },
     { name: 'Cultural Awareness', level: 88 },
-    { name: 'Critical Thinking', level: 82 },
-    { name: 'Analytical Thinking', level: 80 },
-    { name: 'Political Awareness', level: 78 },
+    { name: 'Critical Thinking', level: 94 },
+    { name: 'Analytical Thinking', level: 82 },
+    { name: 'Political Awareness', level: 93 },
   ],
   tools: [
-    { name: 'Pencil & Traditional Tools', level: 95 },
+    { name: 'Pencil & Traditional Tools', level: 97 },
     { name: 'Sketchbook Practice', level: 90 },
     { name: 'Reference Study', level: 85 },
     { name: 'Online Learning', level: 88 },
-    { name: 'Time Management', level: 80 },
+    { name: 'Time Management', level: 79 },
   ],
 };
 
