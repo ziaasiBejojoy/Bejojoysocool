@@ -4,56 +4,56 @@ import { Button } from '@/components/ui/button';
 
 const certificates = [
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: '2024',
-    credentialId: 'AWS-SAA-123456',
-    image: '🏆',
+    title: 'Portrait Drawing Practice Certificate',
+    issuer: 'Self Learning & Practice',
+    date: '2025',
+    credentialId: 'ART-PRT-001',
+    image: '🎨',
     color: 'from-orange-500/20 to-yellow-500/20',
     link: '#',
   },
   {
-    title: 'Google Professional Cloud Developer',
-    issuer: 'Google Cloud',
-    date: '2023',
-    credentialId: 'GCP-PCD-789012',
-    image: '☁️',
+    title: 'Art & Creativity Development',
+    issuer: 'Online Learning Platforms',
+    date: '2025',
+    credentialId: 'ART-CRT-002',
+    image: '🖌️',
     color: 'from-blue-500/20 to-cyan-500/20',
     link: '#',
   },
   {
-    title: 'Meta Front-End Developer',
-    issuer: 'Meta (Coursera)',
-    date: '2023',
-    credentialId: 'META-FE-345678',
-    image: '⚛️',
+    title: 'Social Science Exploration',
+    issuer: 'Independent Study',
+    date: '2024',
+    credentialId: 'SOC-EXP-003',
+    image: '🧠',
     color: 'from-blue-600/20 to-indigo-500/20',
     link: '#',
   },
   {
-    title: 'MongoDB Certified Developer',
-    issuer: 'MongoDB University',
-    date: '2023',
-    credentialId: 'MDB-DEV-901234',
-    image: '🍃',
+    title: 'Cultural Awareness Learning',
+    issuer: 'Self Study & Observation',
+    date: '2024',
+    credentialId: 'CUL-AWR-004',
+    image: '🌍',
     color: 'from-green-500/20 to-emerald-500/20',
     link: '#',
   },
   {
-    title: 'Certified Kubernetes Administrator',
-    issuer: 'CNCF',
-    date: '2022',
-    credentialId: 'CKA-567890',
-    image: '⚙️',
+    title: 'Political Awareness & Global Issues',
+    issuer: 'News & Independent Research',
+    date: '2024',
+    credentialId: 'POL-AWR-005',
+    image: '📰',
     color: 'from-indigo-500/20 to-purple-500/20',
     link: '#',
   },
   {
-    title: 'Professional Scrum Master I',
-    issuer: 'Scrum.org',
-    date: '2022',
-    credentialId: 'PSM-I-234567',
-    image: '📋',
+    title: 'Continuous Learning Journey',
+    issuer: 'Personal Development',
+    date: '2023',
+    credentialId: 'LRN-JNY-006',
+    image: '📚',
     color: 'from-teal-500/20 to-cyan-500/20',
     link: '#',
   },
@@ -70,9 +70,9 @@ export default function CertificatesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block">Kredensial</span>
+          <span className="text-primary font-medium mb-2 block">Achievements</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Sertifikat &amp; Lisensi
+            Learning & Experience
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -116,7 +116,7 @@ export default function CertificatesSection() {
                   <Button variant="outline" size="sm" className="rounded-full mt-2" asChild>
                     <a href={cert.link} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-1" />
-                      Verifikasi
+                      View
                     </a>
                   </Button>
                 </div>
