@@ -19,13 +19,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'zia@example.com',
+    value: 'ziasyara06@gmail.com',
     href: 'mailto:zia@example.com',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+62 8xx xxxx xxxx',
+    value: '+62 81369556650',
     href: '#',
   },
   {
