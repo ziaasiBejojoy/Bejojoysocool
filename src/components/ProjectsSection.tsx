@@ -4,54 +4,54 @@ import { Button } from '@/components/ui/button';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Platform e-commerce modern dengan fitur lengkap termasuk payment gateway, inventory management, dan analytics dashboard.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    image: '🛒',
+    title: 'Portrait Drawing Collection',
+    description: 'A collection of my portrait drawings that focus on capturing emotions, expressions, and human character through detailed sketches.',
+    tags: ['Portrait', 'Sketching', 'Art'],
+    image: '🎨',
     color: 'from-blue-500/20 to-cyan-500/20',
     github: '#',
     demo: '#',
   },
   {
-    title: 'Learning Management System',
-    description: 'Platform pembelajaran online dengan video streaming, quiz interaktif, dan progress tracking.',
-    tags: ['Next.js', 'TypeScript', 'MongoDB', 'WebRTC'],
-    image: '📚',
+    title: 'Cultural Observation Journal',
+    description: 'A personal project where I document and reflect on cultural diversity, traditions, and social behaviors in everyday life.',
+    tags: ['Culture', 'Observation', 'Writing'],
+    image: '🌍',
     color: 'from-purple-500/20 to-pink-500/20',
     github: '#',
     demo: '#',
   },
   {
-    title: 'Social Media Dashboard',
-    description: 'Dashboard analytics untuk social media dengan real-time data visualization dan reporting.',
-    tags: ['React', 'D3.js', 'Firebase', 'Tailwind'],
-    image: '📊',
+    title: 'Social Issues Exploration',
+    description: 'A collection of thoughts and insights about social issues, human behavior, and society based on my learning and curiosity.',
+    tags: ['Social Science', 'Analysis', 'Learning'],
+    image: '🧠',
     color: 'from-orange-500/20 to-red-500/20',
     github: '#',
     demo: '#',
   },
   {
-    title: 'AI Content Generator',
-    description: 'Tool untuk generate konten menggunakan AI dengan integrasi berbagai model language.',
-    tags: ['Python', 'FastAPI', 'OpenAI', 'React'],
-    image: '🤖',
+    title: 'Political Awareness Notes',
+    description: 'A project where I stay updated and summarize current political situations and global issues to improve my understanding.',
+    tags: ['Politics', 'Awareness', 'Global Issues'],
+    image: '📰',
     color: 'from-green-500/20 to-teal-500/20',
     github: '#',
     demo: '#',
   },
   {
-    title: 'Video Editing Tutorial',
-    description: 'Seri tutorial video editing dengan 100+ episode dan 10k+ subscribers.',
-    tags: ['Premiere Pro', 'After Effects', 'YouTube'],
-    image: '🎬',
+    title: 'Drawing Practice Sessions',
+    description: 'A series of my drawing practice sessions where I improve my skills step by step, focusing on portraits and anatomy.',
+    tags: ['Art Practice', 'Portrait', 'Learning'],
+    image: '✏️',
     color: 'from-red-500/20 to-orange-500/20',
     isContent: true,
     youtube: '#',
   },
   {
-    title: 'Coding Tips & Tricks',
-    description: 'Konten tips programming dan best practices untuk developer Indonesia.',
-    tags: ['Instagram', 'TikTok', 'YouTube Shorts'],
+    title: 'Art & Learning Journey',
+    description: 'Content where I share my journey in art, learning process, and thoughts about social and cultural topics.',
+    tags: ['Art', 'Learning', 'Sharing'],
     image: '💡',
     color: 'from-cyan-500/20 to-blue-500/20',
     isContent: true,
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
         >
           <span className="text-primary font-medium mb-2 block">Portfolio</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Projects &amp; Karya
+            Projects & Work
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
