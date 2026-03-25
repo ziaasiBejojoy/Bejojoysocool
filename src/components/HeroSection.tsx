@@ -25,11 +25,15 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="w-72 h-72">
+            <div className="w-72 h-72 relative flex items-center justify-center">
+            {/* Neon Glow Background */}
+            <div className="absolute inset-0 rounded-full blur-2xl opacity-60 bg-gradient-to-tr from-primary via-pink-500 to-purple-500"></div>
+
+            {/* Image with border */}
             <img
               src="/your-photo.jpg" // ganti dengan foto kamu
               alt="Profile"
-              className="w-full h-full object-cover shadow-xl"
+              className="w-full h-full object-cover border border-white/20 shadow-2xl"
               style={{
                 clipPath: "polygon(50% 0%, 60% 15%, 75% 5%, 85% 20%, 100% 25%, 90% 40%, 100% 50%, 90% 60%, 100% 75%, 85% 80%, 75% 95%, 60% 85%, 50% 100%, 40% 85%, 25% 95%, 15% 80%, 0% 75%, 10% 60%, 0% 50%, 10% 40%, 0% 25%, 15% 20%, 25% 5%, 40% 15%)"
               }}
