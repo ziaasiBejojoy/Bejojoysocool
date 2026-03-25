@@ -52,18 +52,18 @@ export default function HeroSection() {
               Welcome to my personal portfolio
             </motion.span>
 
-            <motion.h2
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-display text-4xl md:text-6xl font-bold mb-6"
             >
-              Zia Syarafana Akbar
+              Student
               <br />
               <span className="text-gradient">
-              Student, Artist & Social Science Enthusiast
+              Artist & Social Science Enthusiast
               </span>
-            </motion.h2>
+            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
