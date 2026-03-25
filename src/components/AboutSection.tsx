@@ -6,27 +6,27 @@ export default function AboutSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const stats = [
-    { icon: Code2, value: '50+', label: 'Projects Selesai' },
-    { icon: Video, value: '100+', label: 'Video Konten' },
-    { icon: Coffee, value: '1000+', label: 'Cangkir Kopi' },
-    { icon: Rocket, value: '5+', label: 'Tahun Pengalaman' },
+    { icon: Code2, value: '30+', label: 'Portrait Drawings' },
+    { icon: Video, value: '50+', label: 'Art & Learning Sessions' },
+    { icon: Coffee, value: '100+', label: 'Hours of Practice' },
+    { icon: Rocket, value: '2+', label: 'Years of Exploration' },
   ];
 
   const accordionData = [
     {
-      title: 'Siapa Saya?',
+      title: 'Who Am I?',
       content:
-        'Saya adalah seorang Fullstack Developer yang fokus pada pembuatan aplikasi web modern dan scalable.',
+        'I am a high school student with a strong passion for art, especially portrait drawing. I enjoy expressing emotions and stories through my artwork.',
     },
     {
-      title: 'Apa Keahlian Saya?',
+      title: 'What Are My Interests?',
       content:
-        'Saya menguasai React, Node.js, Tailwind CSS, dan berbagai teknologi modern lainnya.',
+        'I am deeply interested in social sciences, culture, and understanding human behavior. I also like to stay updated with current political situations and global issues.',
     },
     {
-      title: 'Apa Tujuan Saya?',
+      title: 'What Is My Goal?',
       content:
-        'Membantu bisnis dan individu membangun solusi digital yang impactful dan efisien.',
+        'I want to keep learning, growing, and developing both my artistic skills and my knowledge, so I can contribute meaningful ideas and perspectives in the future.',
     },
   ];
 
@@ -45,9 +45,9 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block">Tentang Saya</span>
+          <span className="text-primary font-medium mb-2 block">About Me</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Mengenal Lebih Dekat
+            Get to Know Me Better
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -71,7 +71,7 @@ export default function AboutSection() {
                     transition={{ repeat: Infinity, duration: 2 }}
                     className="text-8xl"
                   >
-                    👨‍💻
+                    🎨
                   </motion.span>
                 </div>
               </motion.div>
@@ -81,8 +81,8 @@ export default function AboutSection() {
                 transition={{ delay: 0.3 }}
                 className="absolute -bottom-6 -right-6 p-4 glass rounded-xl shadow-card"
               >
-                <p className="font-display font-bold text-2xl text-gradient">5+ Tahun</p>
-                <p className="text-sm text-muted-foreground">Pengalaman</p>
+                <p className="font-display font-bold text-2xl text-gradient">Student</p>
+                <p className="text-sm text-muted-foreground">High School</p>
               </motion.div>
             </div>
           </motion.div>
@@ -96,7 +96,7 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <h3 className="font-display text-2xl md:text-3xl font-bold">
-              Passionate Developer & Creator
+              Creative Artist & Curious Learner
             </h3>
 
             {/* Accordion */}
