@@ -127,6 +127,10 @@
     background: var(--gradient-hero);
   }
 
+   .bg-navbg {
+    background: var(--navbg);
+  }
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
