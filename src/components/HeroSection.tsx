@@ -28,7 +28,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              👋 Selamat datang di portfolio saya
+              welcome to my portofolio
             </motion.span>
           </motion.div>
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
           >
             Zia Syarafana Akbar
             <br />
-            <span className="text-gradient">get to know about me</span>
+            <span className="text-gradient">High school student & Archery athlete</span>
           </motion.h1>
 
           <motion.p
@@ -49,7 +49,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
           >
-            i always try to discover many things such as human sciences and sum software thingy, 
+            i always try to discover many things especially about human science , 
             get to know about me .
           </motion.p>
 
