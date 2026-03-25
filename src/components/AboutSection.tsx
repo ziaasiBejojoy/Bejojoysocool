@@ -1,7 +1,10 @@
-import { motion } from 'framer-motion';
-import { Code2, Video, Coffee, Rocket } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Code2, Video, Coffee, Rocket, ChevronDown } from 'lucide-react';
 
 export default function AboutSection() {
+  const [openIndex, setOpenIndex] = useState(null);
+
   const stats = [
     { icon: Code2, value: '50+', label: 'Projects Selesai' },
     { icon: Video, value: '100+', label: 'Video Konten' },
@@ -9,9 +12,32 @@ export default function AboutSection() {
     { icon: Rocket, value: '5+', label: 'Tahun Pengalaman' },
   ];
 
+  const accordionData = [
+    {
+      title: 'Siapa Saya?',
+      content:
+        'Saya adalah seorang Fullstack Developer yang fokus pada pembuatan aplikasi web modern dan scalable.',
+    },
+    {
+      title: 'Apa Keahlian Saya?',
+      content:
+        'Saya menguasai React, Node.js, Tailwind CSS, dan berbagai teknologi modern lainnya.',
+    },
+    {
+      title: 'Apa Tujuan Saya?',
+      content:
+        'Membantu bisnis dan individu membangun solusi digital yang impactful dan efisien.',
+    },
+  ];
+
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section id="about" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,6 +53,7 @@ export default function AboutSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Image Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -34,18 +61,33 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden glass shadow-card">
+              <motion.div
+                whileHover={{ scale: 1.05, rotate: 1 }}
+                className="aspect-square rounded-2xl overflow-hidden glass shadow-card"
+              >
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-8xl">👨‍💻</span>
+                  <motion.span
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ repeat: Infinity, duration: 2 }}
+                    className="text-8xl"
+                  >
+                    👨‍💻
+                  </motion.span>
                 </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 p-4 glass rounded-xl shadow-card">
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="absolute -bottom-6 -right-6 p-4 glass rounded-xl shadow-card"
+              >
                 <p className="font-display font-bold text-2xl text-gradient">5+ Tahun</p>
                 <p className="text-sm text-muted-foreground">Pengalaman</p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
+          {/* Content Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,19 +96,43 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <h3 className="font-display text-2xl md:text-3xl font-bold">
-              Passionate Developer &amp; Creator
+              Passionate Developer & Creator
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Saya adalah seorang Fullstack Web Developer dengan passion yang kuat dalam menciptakan 
-              solusi digital yang inovatif. Dengan pengalaman lebih dari 5 tahun, saya telah 
-              membantu berbagai klien dan perusahaan dalam mewujudkan ide-ide mereka menjadi 
-              aplikasi web yang powerful dan user-friendly.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Selain coding, saya juga aktif sebagai Content Creator, berbagi pengetahuan 
-              tentang pemrograman dan teknologi melalui berbagai platform. Saya percaya bahwa 
-              berbagi ilmu adalah cara terbaik untuk terus belajar dan berkembang.
-            </p>
+
+            {/* Accordion */}
+            <div className="space-y-4">
+              {accordionData.map((item, index) => (
+                <div key={index} className="border rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => toggleAccordion(index)}
+                    className="w-full flex items-center justify-between p-4 text-left font-semibold"
+                  >
+                    {item.title}
+                    <motion.div
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                    >
+                      <ChevronDown />
+                    </motion.div>
+                  </button>
+
+                  <AnimatePresence>
+                    {openIndex === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-4 pb-4 text-muted-foreground"
+                      >
+                        {item.content}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+            </div>
+
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               {stats.map((stat, index) => (
                 <motion.div
@@ -75,6 +141,7 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
                   className="p-4 glass rounded-xl text-center hover:shadow-card-hover transition-shadow"
                 >
                   <stat.icon className="h-6 w-6 text-primary mx-auto mb-2" />
