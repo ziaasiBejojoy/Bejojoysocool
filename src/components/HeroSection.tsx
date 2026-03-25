@@ -27,7 +27,7 @@ export default function HeroSection() {
           >
             <div className="w-72 h-72 relative flex items-center justify-center">
             {/* Neon Glow Background */}
-            <div className="absolute inset-0 rounded-full blur-2xl opacity-60 bg-gradient-to-tr from-primary via-pink-500 to-purple-500"></div>
+            <div className="absolute inset-0 rounded-full blur-2xl opacity-60 bg-gradient-to-tr from-[#FFE066] via-[#DDE5B6] to-[#3A5A40]"></div>
 
             {/* Image with border */}
             <img
