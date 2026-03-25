@@ -25,11 +25,16 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
+            <div className="w-72 h-72">
             <img
               src="/your-photo.jpg" // ganti dengan foto kamu
               alt="Profile"
-              className="w-72 h-72 object-cover rounded-2xl shadow-xl"
+              className="w-full h-full object-cover shadow-xl"
+              style={{
+                clipPath: "polygon(50% 0%, 60% 15%, 75% 5%, 85% 20%, 100% 25%, 90% 40%, 100% 50%, 90% 60%, 100% 75%, 85% 80%, 75% 95%, 60% 85%, 50% 100%, 40% 85%, 25% 95%, 15% 80%, 0% 75%, 10% 60%, 0% 50%, 10% 40%, 0% 25%, 15% 20%, 25% 5%, 40% 15%)"
+              }}
             />
+          </div>
           </motion.div>
 
           {/* RIGHT SIDE CONTENT */}
