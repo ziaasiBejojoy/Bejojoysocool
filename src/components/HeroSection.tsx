@@ -58,10 +58,10 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-display text-4xl md:text-6xl font-bold mb-6"
             >
-              Zia Syarafana
+              Zia Syarafana Akbar
               <br />
               <span className="text-gradient">
-                Akbar | Student, Artist & Social Science Enthusiast
+                | Student, Artist & Social Science Enthusiast
               </span>
             </motion.h1>
 
