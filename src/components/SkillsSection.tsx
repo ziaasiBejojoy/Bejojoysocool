@@ -2,25 +2,25 @@ import { motion } from 'framer-motion';
 
 const skills = {
   frontend: [
-    { name: 'React', level: 95 },
-    { name: 'TypeScript', level: 90 },
-    { name: 'Next.js', level: 88 },
-    { name: 'Tailwind CSS', level: 95 },
-    { name: 'Vue.js', level: 75 },
+    { name: 'Portrait Drawing', level: 90 },
+    { name: 'Sketching', level: 85 },
+    { name: 'Digital Art Basics', level: 75 },
+    { name: 'Creativity', level: 92 },
+    { name: 'Visual Observation', level: 88 },
   ],
   backend: [
-    { name: 'Node.js', level: 90 },
-    { name: 'Python', level: 85 },
-    { name: 'PostgreSQL', level: 88 },
-    { name: 'MongoDB', level: 82 },
-    { name: 'GraphQL', level: 78 },
+    { name: 'Social Science Understanding', level: 85 },
+    { name: 'Cultural Awareness', level: 88 },
+    { name: 'Critical Thinking', level: 82 },
+    { name: 'Analytical Thinking', level: 80 },
+    { name: 'Political Awareness', level: 78 },
   ],
   tools: [
-    { name: 'Git', level: 95 },
-    { name: 'Docker', level: 80 },
-    { name: 'AWS', level: 75 },
-    { name: 'Figma', level: 85 },
-    { name: 'CI/CD', level: 82 },
+    { name: 'Pencil & Traditional Tools', level: 95 },
+    { name: 'Sketchbook Practice', level: 90 },
+    { name: 'Reference Study', level: 85 },
+    { name: 'Online Learning', level: 88 },
+    { name: 'Time Management', level: 80 },
   ],
 };
 
@@ -61,15 +61,15 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block">Keahlian</span>
+          <span className="text-primary font-medium mb-2 block">My Skills</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Skills &amp; Teknologi
+            Skills & Interests
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Frontend */}
+          {/* Creative Skills */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export default function SkillsSection() {
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Frontend</h3>
+              <h3 className="font-display text-xl font-bold">Creative Skills</h3>
             </div>
             <div className="space-y-4">
               {skills.frontend.map((skill, index) => (
@@ -90,7 +90,7 @@ export default function SkillsSection() {
             </div>
           </motion.div>
 
-          {/* Backend */}
+          {/* Knowledge & Thinking */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,9 +100,9 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">⚙️</span>
+                <span className="text-2xl">🧠</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Backend</h3>
+              <h3 className="font-display text-xl font-bold">Knowledge & Thinking</h3>
             </div>
             <div className="space-y-4">
               {skills.backend.map((skill, index) => (
@@ -111,7 +111,7 @@ export default function SkillsSection() {
             </div>
           </motion.div>
 
-          {/* Tools */}
+          {/* Tools & Habits */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function SkillsSection() {
               <div className="p-3 rounded-xl bg-primary/10">
                 <span className="text-2xl">🛠️</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Tools &amp; Lainnya</h3>
+              <h3 className="font-display text-xl font-bold">Tools & Habits</h3>
             </div>
             <div className="space-y-4">
               {skills.tools.map((skill, index) => (
