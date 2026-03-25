@@ -49,7 +49,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              welcome to my portofolio
+              Welcome to my personal portfolio
             </motion.span>
 
             <motion.h1
@@ -60,7 +60,9 @@ export default function HeroSection() {
             >
               Zia Syarafana Akbar
               <br />
-              <span className="text-gradient">High school student & Archery athlete</span>
+              <span className="text-gradient">
+                High School Student, Portrait Artist & Social Science Enthusiast
+              </span>
             </motion.h1>
 
             <motion.p
@@ -69,8 +71,10 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-lg text-muted-foreground mb-8"
             >
-              i always try to discover many things especially about human science , 
-              get to know about me .
+              I am a high school student who is passionate about drawing, especially portrait art. 
+              I have a strong curiosity about social sciences, culture, and always stay updated 
+              with current political issues. I love learning new perspectives and continuously 
+              growing through knowledge and creativity.
             </motion.p>
 
             <motion.div
@@ -87,7 +91,7 @@ export default function HeroSection() {
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Lihat Projects
+                View Projects
               </Button>
               <Button 
                 variant="outline" 
@@ -98,7 +102,7 @@ export default function HeroSection() {
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Hubungi Saya
+                Contact Me
               </Button>
             </motion.div>
 
