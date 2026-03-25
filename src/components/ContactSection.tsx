@@ -9,29 +9,29 @@ import { z } from 'zod';
 import { supabase } from '@/integrations/supabase/client';
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, 'Nama harus diisi').max(100, 'Nama terlalu panjang'),
-  email: z.string().trim().email('Email tidak valid').max(255, 'Email terlalu panjang'),
-  subject: z.string().trim().min(1, 'Subjek harus diisi').max(200, 'Subjek terlalu panjang'),
-  message: z.string().trim().min(1, 'Pesan harus diisi').max(2000, 'Pesan terlalu panjang'),
+  name: z.string().trim().min(1, 'Name is required').max(100, 'Name is too long'),
+  email: z.string().trim().email('Invalid email').max(255, 'Email is too long'),
+  subject: z.string().trim().min(1, 'Subject is required').max(200, 'Subject is too long'),
+  message: z.string().trim().min(1, 'Message is required').max(2000, 'Message is too long'),
 });
 
 const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@developer.com',
-    href: 'mailto:hello@developer.com',
+    value: 'zia@example.com',
+    href: 'mailto:zia@example.com',
   },
   {
     icon: Phone,
-    label: 'Telepon',
-    value: '+62 812 3456 7890',
-    href: 'tel:+6281234567890',
+    label: 'Phone',
+    value: '+62 8xx xxxx xxxx',
+    href: '#',
   },
   {
     icon: MapPin,
-    label: 'Lokasi',
-    value: 'Jakarta, Indonesia',
+    label: 'Location',
+    value: 'Indonesia',
     href: '#',
   },
 ];
@@ -81,16 +81,16 @@ export default function ContactSection() {
       if (error) throw error;
 
       toast({
-        title: 'Pesan Terkirim! ✨',
-        description: 'Terima kasih telah menghubungi saya. Saya akan membalas secepatnya.',
+        title: 'Message Sent! ✨',
+        description: 'Thank you for reaching out. I will get back to you as soon as possible.',
       });
 
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error: any) {
       console.error('Error sending email:', error);
       toast({
-        title: 'Gagal Mengirim',
-        description: 'Terjadi kesalahan. Silakan coba lagi atau hubungi langsung via email.',
+        title: 'Failed to Send',
+        description: 'Something went wrong. Please try again or contact me directly via email.',
         variant: 'destructive',
       });
     } finally {
@@ -108,9 +108,9 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block">Kontak</span>
+          <span className="text-primary font-medium mb-2 block">Contact</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Hubungi Saya
+            Get In Touch
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -126,12 +126,12 @@ export default function ContactSection() {
           >
             <div>
               <h3 className="font-display text-2xl font-bold mb-4">
-                Mari Berkolaborasi!
+                Let’s Connect!
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Punya project menarik atau ingin berkolaborasi? Jangan ragu untuk 
-                menghubungi saya. Saya selalu terbuka untuk diskusi tentang project 
-                baru, ide kreatif, atau kesempatan untuk menjadi bagian dari visi Anda.
+                I am always open to learning, sharing ideas, and connecting with others. 
+                Whether you want to talk about art, culture, social issues, or just say hello, 
+                feel free to reach out. I would love to hear from you!
               </p>
             </div>
 
@@ -169,14 +169,14 @@ export default function ContactSection() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
-                    Nama
+                    Name
                   </label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Nama Anda"
+                    placeholder="Your name"
                     className={errors.name ? 'border-destructive' : ''}
                   />
                   {errors.name && (
@@ -193,7 +193,7 @@ export default function ContactSection() {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="email@example.com"
+                    placeholder="your@email.com"
                     className={errors.email ? 'border-destructive' : ''}
                   />
                   {errors.email && (
@@ -204,14 +204,14 @@ export default function ContactSection() {
 
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm font-medium">
-                  Subjek
+                  Subject
                 </label>
                 <Input
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Subjek pesan"
+                  placeholder="Message subject"
                   className={errors.subject ? 'border-destructive' : ''}
                 />
                 {errors.subject && (
@@ -221,14 +221,14 @@ export default function ContactSection() {
 
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
-                  Pesan
+                  Message
                 </label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tuliskan pesan Anda..."
+                  placeholder="Write your message here..."
                   rows={5}
                   className={errors.message ? 'border-destructive' : ''}
                 />
@@ -246,12 +246,12 @@ export default function ContactSection() {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                    Mengirim...
+                    Sending...
                   </>
                 ) : (
                   <>
                     <Send className="h-4 w-4 mr-2" />
-                    Kirim Pesan
+                    Send Message
                   </>
                 )}
               </Button>
